@@ -1,0 +1,11 @@
+{% extends 'AplikacjaW/main.html' %}
+{% block content %}
+<div id="addstuff_worker">
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="DODAJ SPRZĘT">
+</form>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'AplikacjaW/main.html' %}
+
+{% block content %}
+<div class='allstuff_first_div'>
+<h2 class="allstuff_h2">PRZEGLĄD CAŁEGO DOSTĘPNEGO SPRZĘTU</h2>
+</div>   
+<table>
+    <tr>
+      <th>Typ sprzętu</th>
+      <th>Kolor sprzętu</th>
+      <th>Cena za godzinę wypożyczenia</th>
+      <th>Rozmiar</th>
+      
+    </tr>
+    {% for i in magazyn_sprzet %}
+      <tr>
+          <td>{{i.typ}}</td>
+          <td>{{i.kolor}}</td>
+          <td>{{i.cena}} zl</td>
+          <td>{{i.rozmiar}}</th>
+      </tr>
+    {% endfor %}
+    </tr>
+  </table> 
+{% endblock %}

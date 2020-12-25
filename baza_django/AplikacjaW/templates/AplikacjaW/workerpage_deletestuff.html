@@ -1,0 +1,37 @@
+{% extends 'AplikacjaW/main.html' %}
+
+{% block content %}
+
+<table>
+    <tr>
+      <th>Typ sprzętu</th>
+      <th>Kolor sprzętu</th>
+      <th>Cena za godzinę wypożyczenia</th>
+      <th>Rozmiar</th>
+      <th>Czy uszkodzony?</th>
+      <th>ID sprzętu</th>
+
+      
+    </tr>
+    {% for i in magazyn_sprzet %}
+      <tr>
+          <td>{{i.typ}}</td>
+          <td>{{i.kolor}}</td>
+          <td>{{i.cena}} zl</td>
+          <td>{{i.rozmiar}}</th>
+          <td>{{i.czyuszkodzony}}</th>
+          <td>{{i.idsprzetu}}</th>
+          <td>
+            <form name="{{i.idsprzetu}}" method="post" action="/workerpage/deletestuff/">
+            {% csrf_token %}
+          <input type="hidden" name="id_sprzetu" value="{{i.idsprzetu}}">
+          <input type="submit" value="USUŃ">
+          </form>
+          </th>
+          
+        
+    {% endfor %}
+    </tr>
+  </table> 
+
+  {% endblock %}
