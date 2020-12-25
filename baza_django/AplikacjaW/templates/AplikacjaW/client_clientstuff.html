@@ -1,0 +1,15 @@
+{% extends 'AplikacjaW/main.html' %}
+
+{% block content %}
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+<form class=clientstuff_form method="post" action="dupa/">
+    {% csrf_token %}
+    <input type="text" id="login" class="fadeIn second" name="login" placeholder="Imię">
+    <input type="text" id="password" class="fadeIn third" name="password" placeholder="Nazwisko">
+    <input type="text" id="phonenumber" class="fadeIn third" name="phonenumber" placeholder="Numer telefonu">
+    <input type="submit" value="WYŚLIJ"></input>
+  </form>
+</div>
+</div>
+{% endblock %}
