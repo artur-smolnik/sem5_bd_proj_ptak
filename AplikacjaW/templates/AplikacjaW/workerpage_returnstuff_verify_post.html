@@ -1,0 +1,8 @@
+<form method="post" name="myform" action="/workerpage/clientstuff/">
+    {% csrf_token %}
+    <input type="hidden" name="client_id" value={{client_id}} />
+</form>
+
+<script type="text/javascript">
+    document.myform.submit();
+</script>
